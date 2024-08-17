@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d03cdf5364.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="imagess/kriti_logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Kriti Khandelwal</span><br></h1>
+            <p>JAVA DEVELOPER</p>
+
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="imagess/about.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Aspiring and enthusiastic Java developer with a solid foundation in Java programming and object-oriented principles. 
+                    Seeking an entry-level position at a forward-thinking company where I can apply my skills, contribute to innovative projects, 
+                    and continue to grow professionally. Eager to collaborate with a dynamic team, tackle challenging problems, and enhance my technical 
+                    expertise in a real-world environment.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Language</span><br>Java,SQL<br></li>
+                        <li><span>Core Subjects</span><br>OOPs,DSA,Operating System,Database Management System</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>GUI</span><br>Designing Desktop Application/App interface<br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-Current</span><br>Bachelor of Technology(CSE)      (93.2)<br> Jecrc University</li>
+                        <li><span>2020</span><br>Senior Secondary Education      (88)<br> St. Mary's Convent</li>
+                        <li><span>2018</span><br>Secondary Education      (80)<br> St. Mary's Convent</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class ="container">
+    <h1 class =" sub-title"> My Services</h1>
+    <div class ="services-list">
+        <div>
+            <h2>Desktop Application Design</h2>
+            <p>
+                Creating desktop applications that work seamlessly<br> 
+                across all devices, ensuring a consistent and engaging<br>
+                user experience whether accessed on a desktop, tablet, or smartphone.
+</p>
+<a href="#">Learn more</a>
+        </div>
+    </div>
+    </div>
+    </div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+            <img src="imagess/atm.png" alt="ATM Simulator">
+            <div class="layer">
+                <h3> ATM Stimulator </h3>
+                <p>
+                    A comprehensive software application<br>
+                    designed to replicate the functionalities of a 
+                    real-world Automated Teller Machine (ATM).
+                </p>
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div id="contact">
+<div class="container">
+<div class="row">
+<div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-solid fa-envelope"></i> kritikhandelwal6188@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> 6367456210</p>
+<div class="social-icons">
+<a href="https://www.linkedin.com/in/kriti-khandelwal-438387239/"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://github.com/Kriti6188"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.instagram.com/_kritzzz25_/"><i class="fa-brands fa-square-instagram"></i></a>
+
+
+</div>
+<br>
+
+<a href="imagess/kritiresume.pdf" download class="btn btn2"><i class="fa-solid fa-file"></i>    Download CV</a>
+</div>
+<div class="contact-right">
+    <form>
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class= "btn btn2">Submit</button>
+        </form>
+</div>
+</div>
+</div>
+<div class="copyright">
+    <p>Copyright@Kriti Khandelwal <i class="fa-solid fa-heart"></i></p>
+</div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
